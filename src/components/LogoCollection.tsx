@@ -51,6 +51,8 @@ export default function LogoCollection() {
                             src={logo}
                             alt={`Fake company number ${index + 1}`}
                             style={logoStyle}
+                            width={20}
+                            height={20}
                         />
 
                     </Grid>

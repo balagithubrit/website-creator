@@ -152,6 +152,8 @@ export default function Testimonials() {
                                     src={logos[index]}
                                     alt={`Logo ${index + 1}`}
                                     style={logoStyle}
+                                    width={20}
+                                    height={20}
                                 />
                             </Box>
                         </Card>

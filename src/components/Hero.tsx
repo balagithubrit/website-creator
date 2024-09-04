@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 
 import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
+import { Grow } from '@mui/material';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -30,8 +32,8 @@ const StyledBox = styled('div')(({ theme }) => ({
   },
   ...theme.applyStyles('dark', {
     boxShadow: '0 0 24px 12px hsla(210, 100%, 25%, 0.2)',
-  // backgroundImage: `url(${'https://www.mapsofindia.com/images/indian-states-and-union-ter.jpg?v:1.0'})`,
-    
+    // backgroundImage: `url(${'https://www.mapsofindia.com/images/indian-states-and-union-ter.jpg?v:1.0'})`,
+
     outlineColor: 'hsla(220, 20%, 42%, 0.1)',
     borderColor: theme.palette.grey[700],
   }),
@@ -58,88 +60,90 @@ export default function Hero() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          pt: { xs: 14, sm: 20 },
-          pb: { xs: 8, sm: 12 },
+          pt: { xs: 20, sm: 20 },
+          pb: { xs: 12, sm: 12 },
         }}
       >
+
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{ alignItems: 'center' }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', sm: 'row' },
-              alignItems: 'center',
-              fontSize: 'clamp(3rem, 10vw, 3.5rem)',
-            }}
-          >
-            Our&nbsp;latest&nbsp;
             <Typography
-              component="span"
               variant="h1"
-              sx={(theme) => ({
-                fontSize: 'inherit',
-                color: 'primary.main',
-                ...theme.applyStyles('dark', {
-                  color: 'primary.light',
-                }),
-              })}
+              sx={{
+                fontSize: {
+                  xs: '10vw',
+                  sm: '60px',
+                  md: '81px'
+                },
+                fontWeight: {
+                  xs: '500',
+                  sm: '700',
+                },
+                textAlign: 'center'
+              }}
             >
-              products
+              Build Your Dream Website&nbsp;
+              <Typography
+                component="span"
+                variant="h1"
+                sx={(theme) => ({
+                  fontSize: 'inherit',
+                  color: 'primary.main',
+                  ...theme.applyStyles('dark', {
+                    color: 'primary.light',
+                  }),
+                })}
+              >
+                Today!
+              </Typography>
             </Typography>
-          </Typography>
+          
           <Typography
+
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
-              width: { sm: '100%', md: '80%' },
+              width: { sm: '70%', md: '70%' },
             }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions
-            tailored to your needs. Elevate your experience with top-tier features
-            and services.
+            Easy, Affordable, and Professional Website Solutions for Every Business.
           </Typography>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={1}
-            useFlexGap
-            sx={{ pt: 2, width: { xs: '100%', sm: '350px' } }}
-          >
-            <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
-              Email
-            </InputLabel>
-            <TextField
-              id="email-hero"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              fullWidth
-            />
-            <Button
-              variant="contained"
+         
+          <Button
               color="primary"
               size="small"
-              sx={{ minWidth: 'fit-content' }}
+              sx={{
+                width: { xs: '90%', sm: '30%' },
+                minWidth: 'fit-content',
+                padding: '8px 16px', // Adjust padding as needed
+                borderRadius: '8px', // Adjust border radius for rounded corners
+                fontSize: '0.875rem', // Font size for the button text
+                fontWeight: '600', // Font weight for the button text
+                backgroundColor: '#1A8F5C ', // Custom background color (WhatsApp green)
+                '&:hover': {
+                  backgroundColor: '#1DA851', // Darker green on hover
+                },
+                margin: '8px',
+              }}
+              startIcon={<WhatsAppIcon />}
             >
-              Start now
+              Whatsapp Us
             </Button>
-          </Stack>
           <Typography
             variant="caption"
             color="text.secondary"
             sx={{ textAlign: 'center' }}
           >
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
+            By clicking &quot;Whastsapp&quot; get&nbsp;
             <Link href="#" color="primary">
-              Terms & Conditions
+              Quotation
             </Link>
             .
           </Typography>
+          
         </Stack>
         {/* <StyledBox id="image" /> */}
       </Container>
